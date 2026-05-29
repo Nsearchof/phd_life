@@ -1,0 +1,9 @@
+[project]
+name = "phd-life"
+version = "0.1.0"
+description = "PhD research documentation, literature database, tasking, and schedule"
+readme = "README.md"
+requires-python = ">=3.11"
+dependencies = [
+    "pyyaml>=6.0",
+]

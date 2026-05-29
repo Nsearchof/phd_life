@@ -216,3 +216,33 @@ __marimo__/
 
 # Streamlit
 .streamlit/secrets.toml
+
+# ───────────────────────── phd_life repo-specific ─────────────────────────
+
+# Claude Code per-machine state
+.claude/
+
+# Obsidian vault — commit shared config, ignore per-user/per-machine state
+.obsidian/workspace.json
+.obsidian/workspace-mobile.json
+.obsidian/cache/
+.obsidian/plugins/
+
+# Bibliography — generated BibTeX is regenerable from the YAML cite-cards.
+Literature/Bibliography/bibliography.bib
+
+# Literature/Papers — two-tier PDF policy.
+# Default: ignore all PDFs. Open-access / public-domain PDFs are allow-listed
+# back in per source via `git add -f`. In-copyright PDFs stay local only
+# (keep just the cite-card + reading notes, which are fair-use).
+Literature/Papers/**/*.pdf
+Literature/Papers/**/*.PDF
+!Literature/Papers/**/.gitkeep
+
+# Experiments — raw/large data stays out of git; the notebook entry (Markdown)
+# records what was run and where the data lives.
+Research/Experiments/data/
+*.h5
+*.hdf5
+*.npy
+*.npz

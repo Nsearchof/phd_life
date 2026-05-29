@@ -1,0 +1,44 @@
+# Source-of-truth for the PhD timeline. Edit this file, then regenerate the chart:
+#     uv run python Planning/build_gantt.py
+#
+# This is placeholder content — replace the dates and tasks with your real program
+# timeline. Each task needs a `name` and `start`; then either `end:` (YYYY-MM-DD) or
+# `duration:` (e.g. "8w", "90d", "3m"). A `type: milestone` task is a zero-length
+# marker and needs only `start`. Optional `type:` values: task (default), milestone,
+# active (in progress), done (completed), crit (critical path).
+
+title: "PhD timeline — Trey Morris"
+date_format: "YYYY-MM-DD"
+axis_format: "%Y-%m"           # tick label format on the time axis
+
+sections:
+  - name: "Coursework & Quals"
+    tasks:
+      - { name: "Required coursework",        start: 2026-06-01, duration: "12m", type: active }
+      - { name: "Qualifying exam prep",        start: 2027-01-05, end: 2027-04-30 }
+      - { name: "Qualifying exam",             start: 2027-05-03, type: milestone }
+
+  - name: "Literature review"
+    tasks:
+      - { name: "Broad survey",                start: 2026-06-01, end: 2026-10-31 }
+      - { name: "Focused review (topic)",      start: 2026-11-01, end: 2027-03-31 }
+      - { name: "Review write-up",             start: 2027-04-01, duration: "8w" }
+
+  - name: "Research — Theory"
+    tasks:
+      - { name: "Model development",           start: 2027-05-10, end: 2027-11-30 }
+      - { name: "Derivations & checks",        start: 2027-09-01, end: 2028-03-31 }
+
+  - name: "Research — Experiment"
+    tasks:
+      - { name: "Apparatus / method setup",    start: 2027-06-01, end: 2027-12-15 }
+      - { name: "Data campaign 1",             start: 2028-01-10, end: 2028-06-30 }
+      - { name: "Data campaign 2",             start: 2028-09-01, end: 2029-02-28 }
+
+  - name: "Milestones & deliverables"
+    tasks:
+      - { name: "Thesis proposal / candidacy", start: 2027-09-15, type: milestone }
+      - { name: "First paper submitted",       start: 2028-04-01, type: milestone }
+      - { name: "Second paper submitted",      start: 2029-01-15, type: milestone }
+      - { name: "Dissertation writing",        start: 2029-03-01, duration: "9m" }
+      - { name: "Defense",                     start: 2029-12-10, type: milestone }
